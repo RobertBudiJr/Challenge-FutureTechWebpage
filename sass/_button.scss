@@ -1,0 +1,16 @@
+.btn-rm {
+  color: black !important;
+  border-width: 1px;
+  border-color: #17cad0 !important;
+  background-color: transparent !important;
+  font-style: italic;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  transition: all 0.2s;
+}
+
+.btn-rm:hover {
+  background-color: #17cad0 !important;
+}

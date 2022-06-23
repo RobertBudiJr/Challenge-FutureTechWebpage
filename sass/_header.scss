@@ -1,0 +1,42 @@
+.header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 85%;
+  margin: 1rem auto;
+  padding: 2rem 0;
+
+  &__heading-3 {
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 0;
+  }
+
+  &__head-btn {
+    border: none;
+    border-radius: 0;
+
+    background-color: $font-color;
+    height: 3px;
+    width: 3rem;
+    margin-top: 0;
+
+    &::before,
+    &::after {
+      background-color: $font-color;
+      height: 3px;
+      width: 3rem;
+      content: '';
+      display: block;
+    }
+
+    &::before {
+      transform: translateY(-0.9rem);
+    }
+    &::after {
+      transform: translateY(0.7rem);
+    }
+  }
+}

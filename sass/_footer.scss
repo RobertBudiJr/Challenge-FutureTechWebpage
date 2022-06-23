@@ -1,0 +1,36 @@
+.footer {
+  background-color: #293333;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-header {
+      margin-top: 4.9rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      font-size: 3rem;
+      font-family: $font-secondary;
+    }
+
+    &-icon {
+      margin-top: 3.4rem;
+
+      display: flex;
+      gap: 2rem;
+
+      img {
+        width: 2.3rem;
+        height: 100%;
+      }
+    }
+
+    &-footer {
+      color: #999;
+      font-size: 1.6rem;
+      margin: 3rem 2rem;
+    }
+  }
+}

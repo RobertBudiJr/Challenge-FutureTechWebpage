@@ -1,0 +1,53 @@
+.predict {
+  background-color: #1a1a1a;
+  position: relative;
+  height: 40rem;
+
+  &__block {
+    &-1 {
+      position: absolute;
+      width: 14rem;
+      height: 0.1rem;
+      top: 16rem;
+      left: 28rem;
+
+      border: 4px solid #17cad0;
+    }
+
+    &-2 {
+      position: absolute;
+      width: 1.5rem;
+      height: 12rem;
+      bottom: -6rem;
+      right: 9rem;
+
+      border: 8px solid #17cad0;
+    }
+  }
+
+  &__text {
+    margin: 8rem 6vw;
+
+    &__heading-3 {
+      padding: 8rem 20rem 4rem;
+      color: white;
+      font-size: 3rem;
+      line-height: 1.2;
+      font-family: $font-secondary;
+    }
+
+    &__fill {
+      position: absolute;
+      left: 46rem;
+      right: 12rem;
+      color: white;
+      font-size: 1.6rem;
+      word-wrap: break-word;
+
+      span {
+        margin-top: 3rem;
+        display: block;
+      }
+    }
+  }
+}

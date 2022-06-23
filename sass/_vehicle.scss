@@ -1,0 +1,50 @@
+.vehicle {
+  margin: 0 7vw;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__left {
+    grid-column: 1 / 2;
+
+    background-image: url(../assets/truck.jpeg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__right {
+    grid-column: 2 / -1;
+    margin-left: 3rem;
+
+    &__heading-5 {
+      margin: 5rem 0 0;
+    }
+
+    &__heading-2 {
+      margin: 2rem 0 0;
+    }
+
+    &__title {
+      margin: 5rem 0 0;
+    }
+
+    &__fill {
+      margin: 1.3rem 0 0;
+    }
+
+    &__btn {
+      margin: 5rem 0;
+    }
+  }
+
+  &__block {
+    position: absolute;
+    width: 59rem;
+    height: 0.8rem;
+    right: -9rem;
+    top: -4rem;
+    z-index: 2;
+    background-color: #17cad0;
+  }
+}

@@ -1,0 +1,48 @@
+.gallery {
+  margin: 8rem 7vw 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 20rem;
+  grid-gap: 3rem;
+
+  &__pic1 {
+    grid-column: 1 / 2;
+
+    background-image: url(../assets/pic1.jpeg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__pic2 {
+    grid-column: 2 / 3;
+
+    background-image: url(../assets/pic2.jpeg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__pic3 {
+    grid-column: 3 / 4;
+
+    background-image: url(../assets/pic3.jpeg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__pic4 {
+    grid-column: 4 / 5;
+
+    background-image: url(../assets/pic4.jpeg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__pic5 {
+    grid-column: 5 / 6;
+
+    background-image: url(../assets/pic5.jpeg);
+    background-position: center;
+    background-size: cover;
+  }
+}

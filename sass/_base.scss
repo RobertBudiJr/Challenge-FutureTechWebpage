@@ -1,0 +1,32 @@
+//Color
+$font-color: #292c2c;
+$font-color-light: #808080;
+
+//Font Style
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Ubuntu', sans-serif;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  color: $font-color;
+  font-size: 1.6rem; //1rem = 10px
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}

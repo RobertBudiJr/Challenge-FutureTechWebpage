@@ -1,0 +1,484 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #292c2c;
+  font-size: 1.6rem;
+  line-height: 1.6; }
+
+.container {
+  width: 100%;
+  margin: 0 auto; }
+
+.heading-1 {
+  font-weight: 400;
+  font-size: 7.2rem;
+  line-height: 1.1; }
+
+.heading-2 {
+  color: #292c2c;
+  font-size: 3.6rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  line-height: 1.1; }
+
+.heading-3 {
+  font-weight: 400;
+  font-size: 3rem; }
+
+.heading-5 {
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  color: #808080;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2; }
+
+.para1 {
+  color: #292c2c;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  word-wrap: break-word; }
+
+.para2 {
+  word-wrap: break-word; }
+
+.btn-rm {
+  color: black !important;
+  border-width: 1px;
+  border-color: #17cad0 !important;
+  background-color: transparent !important;
+  font-style: italic;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  transition: all 0.2s; }
+
+.btn-rm:hover {
+  background-color: #17cad0 !important; }
+
+.header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: 1rem auto;
+  padding: 2rem 0; }
+  .header__heading-3 {
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 0; }
+  .header__head-btn {
+    border: none;
+    border-radius: 0;
+    background-color: #292c2c;
+    height: 3px;
+    width: 3rem;
+    margin-top: 0; }
+    .header__head-btn::before, .header__head-btn::after {
+      background-color: #292c2c;
+      height: 3px;
+      width: 3rem;
+      content: '';
+      display: block; }
+    .header__head-btn::before {
+      transform: translateY(-0.9rem); }
+    .header__head-btn::after {
+      transform: translateY(0.7rem); }
+
+.hero {
+  width: 93%;
+  position: relative; }
+  .hero__background {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 62rem; }
+    .hero__background__left {
+      grid-column: 1 / 2;
+      background-image: url(../assets/hero-left.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 5% 0; }
+    .hero__background__right {
+      grid-column: 2 / -1;
+      background-image: url(../assets/hero-right.jpeg);
+      background-size: cover;
+      background-position: center; }
+  .hero__heading-1 {
+    font-family: "Ubuntu", sans-serif; }
+  .hero__paragraph {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.4rem;
+    word-wrap: break-word;
+    margin: 2rem 0; }
+  .hero__text {
+    position: absolute;
+    left: 49.5rem;
+    right: 7rem;
+    top: 13rem;
+    word-wrap: break-word;
+    border: 6px solid white;
+    padding: 3rem 1rem 2rem; }
+
+.feature {
+  margin: 6rem 7vw 10rem;
+  position: relative;
+  display: flex;
+  flex-direction: row; }
+  .feature-box {
+    display: flex;
+    padding: 6rem 2.5rem 1.5rem; }
+    .feature-box__1 {
+      background-color: #17cad0; }
+      .feature-box__1__heading {
+        color: white; }
+      .feature-box__1__fill {
+        color: white; }
+    .feature-box__heading {
+      margin: 3rem 2rem 0;
+      font-size: 2.4rem;
+      font-weight: 400; }
+    .feature-box__fill {
+      margin: 2rem 2rem 2.5rem;
+      font-size: 1.4rem;
+      font-style: italic; }
+  .feature__block {
+    position: absolute;
+    width: 1rem;
+    height: 11.5rem;
+    left: 5rem;
+    bottom: -10%;
+    z-index: 2;
+    background-color: #293333; }
+
+.about {
+  margin: 6rem 7vw 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .about__left {
+    grid-column: 1 / 2;
+    padding: 0 3rem; }
+    .about__left__heading-5 {
+      margin: 5rem 0 0; }
+    .about__left__heading-2 {
+      margin: 2rem 0 0; }
+    .about__left__title {
+      margin: 5rem 0 0; }
+    .about__left__fill {
+      margin: 1.3rem 0 0; }
+    .about__left__btn {
+      margin: 5rem 0; }
+  .about__right {
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+    grid-gap: 3rem; }
+    .about__right__up {
+      grid-column: 1 / 2;
+      background-image: url(../assets/about-up.jpeg);
+      background-position: center;
+      background-size: cover; }
+    .about__right__bottom {
+      grid-column: 2 / -1;
+      background-image: url(../assets/about-bottom.jpeg);
+      background-position: center;
+      background-size: cover; }
+  .about__block {
+    position: absolute;
+    width: 2rem;
+    height: 19rem;
+    left: 100rem;
+    bottom: -10rem;
+    z-index: 2;
+    background-color: #17cad0;
+    outline: 1.5rem solid white; }
+
+.vehicle {
+  margin: 0 7vw;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .vehicle__left {
+    grid-column: 1 / 2;
+    background-image: url(../assets/truck.jpeg);
+    background-position: center;
+    background-size: cover; }
+  .vehicle__right {
+    grid-column: 2 / -1;
+    margin-left: 3rem; }
+    .vehicle__right__heading-5 {
+      margin: 5rem 0 0; }
+    .vehicle__right__heading-2 {
+      margin: 2rem 0 0; }
+    .vehicle__right__title {
+      margin: 5rem 0 0; }
+    .vehicle__right__fill {
+      margin: 1.3rem 0 0; }
+    .vehicle__right__btn {
+      margin: 5rem 0; }
+  .vehicle__block {
+    position: absolute;
+    width: 59rem;
+    height: 0.8rem;
+    right: -9rem;
+    top: -4rem;
+    z-index: 2;
+    background-color: #17cad0; }
+
+.gallery {
+  margin: 8rem 7vw 2rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 20rem;
+  grid-gap: 3rem; }
+  .gallery__pic1 {
+    grid-column: 1 / 2;
+    background-image: url(../assets/pic1.jpeg);
+    background-position: center;
+    background-size: cover; }
+  .gallery__pic2 {
+    grid-column: 2 / 3;
+    background-image: url(../assets/pic2.jpeg);
+    background-position: center;
+    background-size: cover; }
+  .gallery__pic3 {
+    grid-column: 3 / 4;
+    background-image: url(../assets/pic3.jpeg);
+    background-position: center;
+    background-size: cover; }
+  .gallery__pic4 {
+    grid-column: 4 / 5;
+    background-image: url(../assets/pic4.jpeg);
+    background-position: center;
+    background-size: cover; }
+  .gallery__pic5 {
+    grid-column: 5 / 6;
+    background-image: url(../assets/pic5.jpeg);
+    background-position: center;
+    background-size: cover; }
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative; }
+  .info__left {
+    grid-column: 1 / 2;
+    background-color: #293333; }
+    .info__left .heading-5 {
+      color: white;
+      margin-top: 5rem;
+      margin-left: 7vw; }
+      .info__left .heading-5:first-child {
+        margin-top: 8rem; }
+    .info__left .para3 {
+      margin-top: 2rem;
+      margin-left: 7vw;
+      margin-bottom: 2rem;
+      font-style: italic;
+      color: white;
+      word-wrap: break-word;
+      padding-right: 7rem; }
+      .info__left .para3:last-child {
+        margin-bottom: 8rem; }
+  .info__right {
+    grid-column: 2 / -1;
+    background-color: #17cad0; }
+  .info__text {
+    color: white;
+    text-align: end;
+    position: absolute;
+    top: 19rem;
+    right: 15rem;
+    left: 59rem;
+    padding: 4rem 0;
+    padding-right: 2rem;
+    border: solid 5px white; }
+    .info__text__heading-2 {
+      color: white;
+      margin-top: 3.5rem;
+      margin-left: 2rem; }
+    .info__text__paragraph {
+      font-size: 1.8rem;
+      margin: 2rem 0 3.5rem 2rem; }
+
+.gadgets {
+  margin: 8rem 7vw;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .gadgets__left {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(2, 25rem);
+    grid-template-rows: repeat(2, 25rem);
+    grid-gap: 3rem; }
+    .gadgets__left__gadget1 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      background-image: url(../assets/gad1.jpeg);
+      background-position: center;
+      background-size: cover; }
+    .gadgets__left__gadget2 {
+      grid-column: 2 / -1;
+      grid-row: 1 / 2;
+      background-image: url(../assets/gad2.jpeg);
+      background-position: center;
+      background-size: cover; }
+    .gadgets__left__gadget3 {
+      grid-column: 1 / 2;
+      grid-row: 2 / -1;
+      background-image: url(../assets/gad3.jpeg);
+      background-position: center;
+      background-size: cover; }
+    .gadgets__left__gadget4 {
+      grid-column: 2 / -1;
+      grid-row: 2 / -1;
+      background-image: url(../assets/gad4.jpeg);
+      background-position: center;
+      background-size: cover; }
+  .gadgets__right {
+    grid-column: 2 / -1;
+    padding-left: 3rem; }
+    .gadgets__right__heading-5 {
+      margin-top: 5rem; }
+    .gadgets__right__heading-2 {
+      margin-top: 2rem; }
+    .gadgets__right__title {
+      margin-top: 5rem; }
+    .gadgets__right__fill {
+      margin-top: 1.3rem; }
+    .gadgets__right__btn {
+      margin: 5rem 0; }
+  .gadgets__block {
+    position: absolute;
+    width: 1.8rem;
+    height: 19rem;
+    left: 4rem;
+    bottom: -5rem;
+    z-index: 2;
+    background-color: #17cad0;
+    outline: 1.5rem solid white; }
+
+.predict {
+  background-color: #1a1a1a;
+  position: relative;
+  height: 40rem; }
+  .predict__block-1 {
+    position: absolute;
+    width: 14rem;
+    height: 0.1rem;
+    top: 16rem;
+    left: 28rem;
+    border: 4px solid #17cad0; }
+  .predict__block-2 {
+    position: absolute;
+    width: 1.5rem;
+    height: 12rem;
+    bottom: -6rem;
+    right: 9rem;
+    border: 8px solid #17cad0; }
+  .predict__text {
+    margin: 8rem 6vw; }
+    .predict__text__heading-3 {
+      padding: 8rem 20rem 4rem;
+      color: white;
+      font-size: 3rem;
+      line-height: 1.2;
+      font-family: "Ubuntu", sans-serif; }
+    .predict__text__fill {
+      position: absolute;
+      left: 46rem;
+      right: 12rem;
+      color: white;
+      font-size: 1.6rem;
+      word-wrap: break-word; }
+      .predict__text__fill span {
+        margin-top: 3rem;
+        display: block; }
+
+.tech {
+  margin: 4rem 7vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 3rem; }
+  .tech1 {
+    grid-column: 1 / 2; }
+  .tech2 {
+    grid-column: 2 / 3; }
+  .tech3 {
+    grid-column: 3 / 4; }
+  .tech4 {
+    grid-column: 4 / 5; }
+  .tech5 {
+    grid-column: 5 / 6; }
+  .tech__heading-4 {
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    margin: 2rem 0;
+    line-height: 1.2; }
+  .tech__fill {
+    font-style: italic;
+    word-wrap: break-word;
+    font-size: 1.6rem;
+    line-height: 1.6; }
+
+.quote {
+  margin: 8rem 7vw;
+  height: 40rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .quote__left {
+    grid-column: 1 / 2;
+    margin-top: 5rem; }
+    .quote__left__quote {
+      color: #17cad0;
+      font-size: 1.6rem;
+      margin: 2rem 6rem 0 0; }
+    .quote__left__name {
+      font-size: 2rem;
+      font-family: "Ubuntu", sans-serif;
+      margin: 2rem 6rem 3rem 0;
+      font-weight: 400; }
+  .quote__right {
+    grid-column: 2 / -1;
+    background-image: url(../assets/quote.jpeg);
+    background-position: center;
+    background-size: cover; }
+
+.footer {
+  background-color: #293333; }
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .footer-content-header {
+      margin-top: 4.9rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      font-size: 3rem;
+      font-family: "Ubuntu", sans-serif; }
+    .footer-content-icon {
+      margin-top: 3.4rem;
+      display: flex;
+      gap: 2rem; }
+      .footer-content-icon img {
+        width: 2.3rem;
+        height: 100%; }
+    .footer-content-footer {
+      color: #999;
+      font-size: 1.6rem;
+      margin: 3rem 2rem; }

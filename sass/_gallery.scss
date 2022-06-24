@@ -3,11 +3,24 @@
 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 20rem;
+  height: 40rem;
   grid-gap: 3rem;
+
+  @include respond(phone) {
+    margin-top: 1rem;
+    height: 210rem;
+    grid-template-rows: repeat(5, 40rem);
+    grid-template-columns: none;
+    grid-gap: 2rem;
+  }
 
   &__pic1 {
     grid-column: 1 / 2;
+
+    @include respond(phone) {
+      grid-column: 1 / span 2;
+      grid-row: 1 / 2;
+    }
 
     background-image: url(../assets/pic1.jpeg);
     background-position: center;
@@ -17,6 +30,11 @@
   &__pic2 {
     grid-column: 2 / 3;
 
+    @include respond(phone) {
+      grid-column: 1 / span 2;
+      grid-row: 2 / 3;
+    }
+
     background-image: url(../assets/pic2.jpeg);
     background-position: center;
     background-size: cover;
@@ -24,6 +42,11 @@
 
   &__pic3 {
     grid-column: 3 / 4;
+
+    @include respond(phone) {
+      grid-column: 1 / span 2;
+      grid-row: 3 / 4;
+    }
 
     background-image: url(../assets/pic3.jpeg);
     background-position: center;
@@ -33,6 +56,11 @@
   &__pic4 {
     grid-column: 4 / 5;
 
+    @include respond(phone) {
+      grid-column: 1 / span 2;
+      grid-row: 4 / 5;
+    }
+
     background-image: url(../assets/pic4.jpeg);
     background-position: center;
     background-size: cover;
@@ -40,6 +68,11 @@
 
   &__pic5 {
     grid-column: 5 / 6;
+
+    @include respond(phone) {
+      grid-column: 1 / span 2;
+      grid-row: 5 / 6;
+    }
 
     background-image: url(../assets/pic5.jpeg);
     background-position: center;

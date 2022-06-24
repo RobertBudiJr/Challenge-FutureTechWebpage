@@ -3,6 +3,14 @@
   position: relative;
   height: 40rem;
 
+  @include respond(tab-port) {
+    height: 50rem;
+  }
+
+  @include respond(phone) {
+    height: 47rem;
+  }
+
   &__block {
     &-1 {
       position: absolute;
@@ -12,6 +20,10 @@
       left: 28rem;
 
       border: 4px solid #17cad0;
+
+      @include respond(phone) {
+        top: 14rem;
+      }
     }
 
     &-2 {
@@ -34,6 +46,10 @@
       font-size: 3rem;
       line-height: 1.2;
       font-family: $font-secondary;
+
+      @include respond(phone) {
+        padding: 5rem 5rem 6rem;
+      }
     }
 
     &__fill {
@@ -47,6 +63,10 @@
       span {
         margin-top: 3rem;
         display: block;
+      }
+
+      @include respond(phone) {
+        left: 10rem;
       }
     }
   }

@@ -5,8 +5,17 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
+  @include respond(phone) {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: none;
+  }
+
   &__left {
     grid-column: 1 / 2;
+
+    @include respond(phone) {
+      grid-row: 1 / 2;
+    }
 
     background-image: url(../assets/truck.jpeg);
     background-position: center;
@@ -16,6 +25,10 @@
   &__right {
     grid-column: 2 / -1;
     margin-left: 3rem;
+
+    @include respond(phone) {
+      grid-row: 2 / -1;
+    }
 
     &__heading-5 {
       margin: 5rem 0 0;
@@ -46,5 +59,13 @@
     top: -4rem;
     z-index: 2;
     background-color: #17cad0;
+
+    @include respond(tab-port) {
+      right: -7.5rem;
+    }
+
+    @include respond(phone) {
+      right: -5.5rem;
+    }
   }
 }

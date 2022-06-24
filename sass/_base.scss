@@ -6,6 +6,26 @@ $font-color-light: #808080;
 $font-primary: 'Open Sans', sans-serif;
 $font-secondary: 'Ubuntu', sans-serif;
 
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and(max-width: 37.5em) {
+      @content; //600px
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and(max-width: 56.25em) {
+      @content; //900px
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and(max-width: 75em) {
+      @content; //1200px
+    }
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -17,16 +37,34 @@ $font-secondary: 'Ubuntu', sans-serif;
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //1rem 9px; 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1rem 8px; 8/16 = 50%
+  }
 }
 
 body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
   font-family: $font-primary;
   color: $font-color;
   font-size: 1.6rem; //1rem = 10px
   line-height: 1.6;
-}
 
-.container {
-  width: 100%;
-  margin: 0 auto;
+  @include respond(phone) {
+    width: 600px;
+  }
 }

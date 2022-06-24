@@ -5,9 +5,18 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
+  @include respond(phone) {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: none;
+  }
+
   &__left {
     grid-column: 1 / 2;
     padding: 0 3rem;
+
+    @include respond(phone) {
+      grid-row: 1 / 2;
+    }
 
     &__heading-5 {
       margin: 5rem 0 0;
@@ -33,12 +42,16 @@
   &__right {
     grid-column: 2 / -1;
 
+    @include respond(phone) {
+      grid-row: 2 / -1;
+    }
+
     display: grid;
-    grid-template-columns: repeat(2 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-gap: 3rem;
 
     &__up {
-      grid-column: 1 / 2;
+      grid-row: 1 / 2;
 
       background-image: url(../assets/about-up.jpeg);
       background-position: center;
@@ -46,7 +59,7 @@
     }
 
     &__bottom {
-      grid-column: 2 / -1;
+      grid-row: 2 / -1;
 
       background-image: url(../assets/about-bottom.jpeg);
       background-position: center;
@@ -58,10 +71,23 @@
     position: absolute;
     width: 2rem;
     height: 19rem;
-    left: 100rem;
-    bottom: -10rem;
+    left: 80rem;
+    bottom: -7rem;
     z-index: 2;
     background-color: #17cad0;
     outline: 1.5rem solid white;
+
+    @include respond(tab-land) {
+      left: 95rem;
+    }
+    @include respond(tab-port) {
+      left: 80rem;
+    }
+
+    @include respond(phone) {
+      left: 57rem;
+      height: 17rem;
+      width: 1.5rem;
+    }
   }
 }

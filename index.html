@@ -15,12 +15,29 @@
   </head>
   <body>
     <div class="container">
+      <!-- Menu -->
+      <nav class="main-nav">
+        <!-- <div class="nav-background">&nbsp;</div> -->
+        <ul class="main-menu">
+          <li><a class="item" href="#hero">Hero</a></li>
+          <li><a class="item" href="#about">About</a></li>
+          <li><a class="item" href="#feature">Feature</a></li>
+          <li><a class="item" href="#vehicle">Tesla's Trucks</a></li>
+          <li><a class="item" href="#gallery">Gallery</a></li>
+          <li><a class="item" href="#gadgets">Gadgets</a></li>
+          <li><a class="item" href="#predict">Prediction</a></li>
+          <li><a class="item" href="#quote">Quote</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header -->
       <header class="header">
         <h3 class="heading-3 header__heading-3">Future</h3>
-        <button class="header__head-btn"></button>
+        <button class="header__head-btn menu-btn"></button>
       </header>
 
-      <section class="hero">
+      <!-- Hero -->
+      <section class="hero" id="hero">
         <div class="hero__background">
           <div class="hero__background__left">&nbsp;</div>
           <div class="hero__background__right">&nbsp;</div>
@@ -31,7 +48,8 @@
         </div>
       </section>
 
-      <section class="about">
+      <!-- About -->
+      <section class="about" id="about">
         <div class="about__left">
           <h5 class="heading-5 about__left__heading-5">Robotic Process Automation</h5>
           <h2 class="heading-2 about__left__heading-2">Can robots replace HR?</h2>
@@ -53,7 +71,8 @@
         <div class="about__block">&nbsp;</div>
       </section>
 
-      <section class="feature">
+      <!-- Feature -->
+      <section class="feature" id="feature">
         <div class="feature-box feature-box__1">
           <div class="feature-box__icon">
             <img src="assets/project-management.png" alt="" class="" />
@@ -96,7 +115,8 @@
         <div class="feature__block">&nbsp;</div>
       </section>
 
-      <section class="vehicle">
+      <!-- Vehicle -->
+      <section class="vehicle" id="vehicle">
         <div class="vehicle__left">&nbsp;</div>
 
         <div class="vehicle__right">
@@ -115,7 +135,8 @@
         <div class="vehicle__block">&nbsp;</div>
       </section>
 
-      <section class="gallery">
+      <!-- Gallery -->
+      <section class="gallery" id="gallery">
         <div class="gallery__pic1">&nbsp;</div>
         <div class="gallery__pic2">&nbsp;</div>
         <div class="gallery__pic3">&nbsp;</div>
@@ -124,7 +145,8 @@
         <div class="gallery__pic6">&nbsp;</div>
       </section>
 
-      <section class="info">
+      <!-- Info -->
+      <section class="info" id="info">
         <div class="info__left">
           <h5 class="heading-5 info__left__heading5">MACHINES DO IT BETTER</h5>
           <p class="para3 info__left__para3">RPA can be an upgrade over humans when accuracy and speed count—not just in transaction processing but also in more complex tasks such as regulatory reporting and contract management.</p>
@@ -146,7 +168,8 @@
         </div>
       </section>
 
-      <section class="gadgets">
+      <!-- Gadgets -->
+      <section class="gadgets" id="gadgets">
         <div class="gadgets__left">
           <div class="gadgets__left__gadget1">&nbsp;</div>
           <div class="gadgets__left__gadget2">&nbsp;</div>
@@ -170,7 +193,8 @@
         <div class="gadgets__block">&nbsp;</div>
       </section>
 
-      <section class="predict">
+      <!-- Predict -->
+      <section class="predict" id="predict">
         <div class="predict__block-1">&nbsp;</div>
         <div class="predict__block-2">&nbsp;</div>
         <div class="predict__text">
@@ -182,6 +206,7 @@
         </div>
       </section>
 
+      <!-- Tech -->
       <section class="tech">
         <div class="tech1">
           <h4 class="tech__heading-4 heading-4">1. The Internet</h4>
@@ -205,7 +230,8 @@
         </div>
       </section>
 
-      <section class="quote">
+      <!-- Quote -->
+      <section class="quote" id="quote">
         <div class="quote__left">
           <img src="assets/conversation-mark.png" class="quote__left__img" />
           <p class="quote__left__quote">
@@ -218,6 +244,7 @@
         <div class="quote__right">&nbsp;</div>
       </section>
 
+      <!-- Footer -->
       <footer class="footer">
         <div class="footer-content">
           <a href="#" class="footer-content-header">Future</a>
@@ -230,6 +257,12 @@
           <p class="footer-content-footer">&copy; Future Community. All Rights Reserved.</p>
         </div>
       </footer>
+
+      <script>
+        document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
+        // document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.nav-background').classList.toggle('show'));
+        document.querySelector('.main-menu').addEventListener('click', () => document.querySelector('.main-menu').classList.remove('show'));
+      </script>
     </div>
   </body>
 </html>

@@ -348,7 +348,7 @@ ul.main-menu.show {
         right: -7.5rem; } }
     @media only screen and (max-width: 37.5em) {
       .vehicle__block {
-        right: -5.5rem; } }
+        right: -5rem; } }
 
 .gallery {
   margin: 8rem 7vw 2rem;

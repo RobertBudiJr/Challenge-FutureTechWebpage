@@ -94,7 +94,7 @@ body {
   .main-nav ul {
     position: absolute;
     top: 0;
-    left: -5rem;
+    left: 0;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -339,16 +339,10 @@ ul.main-menu.show {
     position: absolute;
     width: 59rem;
     height: 0.8rem;
-    right: -9rem;
+    right: 0rem;
     top: -4rem;
     z-index: 2;
     background-color: #17cad0; }
-    @media only screen and (max-width: 56.25em) {
-      .vehicle__block {
-        right: -7.5rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .vehicle__block {
-        right: -5rem; } }
 
 .gallery {
   margin: 8rem 7vw 2rem;

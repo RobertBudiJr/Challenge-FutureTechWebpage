@@ -55,17 +55,17 @@
     position: absolute;
     width: 59rem;
     height: 0.8rem;
-    right: -9rem;
+    right: 0rem;
     top: -4rem;
     z-index: 2;
     background-color: #17cad0;
 
-    @include respond(tab-port) {
-      right: -7.5rem;
-    }
+    // @include respond(tab-port) {
+    //   right: -7.5rem;
+    // }
 
-    @include respond(phone) {
-      right: -5rem;
-    }
+    // @include respond(phone) {
+    //   right: -5rem;
+    // }
   }
 }

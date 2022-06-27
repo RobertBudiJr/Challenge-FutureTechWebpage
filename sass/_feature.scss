@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: row;
 
-  @include respond(phone) {
+  @include respond(lan-tab) {
     flex-direction: column;
   }
 
@@ -47,7 +47,7 @@
     z-index: 2;
     background-color: #293333;
 
-    @include respond(phone) {
+    @include respond(lan-tab) {
       display: none;
     }
   }

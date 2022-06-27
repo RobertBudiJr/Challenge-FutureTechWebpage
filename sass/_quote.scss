@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  @include respond(phone) {
+  @include respond(port-tab) {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: none;
     height: 70rem;
@@ -14,8 +14,8 @@
   &__left {
     grid-column: 1 / 2;
 
-    @include respond(phone) {
-      grid-row: 1 / 2;
+    @include respond(port-tab) {
+      grid-row: 2 / -1;
     }
 
     margin-top: 5rem;
@@ -37,8 +37,8 @@
   &__right {
     grid-column: 2 / -1;
 
-    @include respond(phone) {
-      grid-row: 2 / -1;
+    @include respond(port-tab) {
+      grid-row: 1 / 2;
     }
 
     background-image: url(../assets/quote.jpeg);

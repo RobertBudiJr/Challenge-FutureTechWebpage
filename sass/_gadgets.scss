@@ -5,16 +5,29 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  @include respond(phone) {
-    margin-bottom: -14rem;
-    grid-template-rows: repeat(2, 1fr);
+  @include respond(lan-tab) {
+    margin: 6rem 7vw -26rem;
+    display: grid;
     grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  @include respond(port-tab) {
+    margin-bottom: -7rem;
+  }
+
+  @include respond(lan-phn) {
+    margin-top: -17rem;
+  }
+
+  @include respond(port-phn) {
+    margin-top: -36rem;
   }
 
   &__left {
     grid-column: 1 / 2;
 
-    @include respond(phone) {
+    @include respond(lan-tab) {
       grid-row: 1 / 2;
     }
 
@@ -23,10 +36,26 @@
     grid-template-rows: repeat(2, 25rem);
     grid-gap: 3rem;
 
-    @include respond(phone) {
-      grid-template-columns: repeat(2, 30rem);
-      grid-template-rows: repeat(2, 30rem);
+    @include respond(lan-tab) {
+      grid-template-columns: repeat(2, 35rem);
+      grid-template-rows: repeat(2, 35rem);
     }
+
+    @include respond(port-tab) {
+      grid-template-columns: repeat(2, 25rem);
+      grid-template-rows: repeat(2, 25rem);
+    }
+
+    @include respond(lan-phn) {
+      grid-template-columns: repeat(2, 20rem);
+      grid-template-rows: repeat(2, 20rem);
+    }
+
+    @include respond(port-phn) {
+      grid-template-columns: repeat(2, 15rem);
+      grid-template-rows: repeat(2, 15rem);
+    }
+
     &__gadget1 {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
@@ -67,11 +96,20 @@
   &__right {
     grid-column: 2 / -1;
 
-    @include respond(phone) {
+    padding-left: 3rem;
+
+    @include respond(lan-tab) {
       grid-row: 2 / -1;
     }
 
-    padding-left: 3rem;
+    @include respond(lan-phn) {
+      margin-top: -9rem;
+    }
+
+    @include respond(port-phn) {
+      margin-top: -21rem;
+      padding-left: 0;
+    }
 
     &__heading-5 {
       margin-top: 5rem;
@@ -104,9 +142,19 @@
     background-color: #17cad0;
     outline: 1.5rem solid white;
 
-    @include respond(phone) {
+    @include respond(lan-tab) {
       bottom: unset;
       top: 29rem;
+    }
+
+    @include respond(lan-phn) {
+      top: 13rem;
+      width: 1.2rem;
+      height: 14rem;
+    }
+
+    @include respond(port-phn) {
+      display: none;
     }
   }
 }

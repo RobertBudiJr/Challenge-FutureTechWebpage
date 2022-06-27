@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  @include respond(phone) {
+  @include respond(port-tab) {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: none;
   }
@@ -13,7 +13,7 @@
   &__left {
     grid-column: 1 / 2;
 
-    @include respond(phone) {
+    @include respond(port-tab) {
       grid-row: 1 / 2;
     }
 
@@ -26,8 +26,16 @@
     grid-column: 2 / -1;
     margin-left: 3rem;
 
-    @include respond(phone) {
+    @include respond(port-tab) {
       grid-row: 2 / -1;
+    }
+
+    @include respond(lan-phn) {
+      margin-bottom: -7rem;
+    }
+
+    @include respond(port-phn) {
+      margin-left: 0;
     }
 
     &__heading-5 {
@@ -60,12 +68,12 @@
     z-index: 2;
     background-color: #17cad0;
 
-    // @include respond(tab-port) {
-    //   right: -7.5rem;
-    // }
+    @include respond(port-tab) {
+      width: 40rem;
+    }
 
-    // @include respond(phone) {
-    //   right: -5rem;
-    // }
+    @include respond(port-phn) {
+      width: 30rem;
+    }
   }
 }

@@ -7,16 +7,26 @@
     grid-template-columns: repeat(2, 1fr);
     height: 62rem;
 
-    @include respond(phone) {
-      grid-template-rows: repeat(2, 1fr);
+    @include respond(port-tab) {
+      height: 98rem;
+      display: grid;
+
       grid-template-columns: none;
-      height: 120rem;
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    @include respond(lan-phn) {
+      height: 91rem;
+    }
+
+    @include respond(port-phn) {
+      height: 100rem;
     }
 
     &__left {
       grid-column: 1 / 2;
 
-      @include respond(phone) {
+      @include respond(port-tab) {
         grid-row: 1 / 2;
       }
 
@@ -29,7 +39,7 @@
     &__right {
       grid-column: 2 / -1;
 
-      @include respond(phone) {
+      @include respond(port-tab) {
         grid-row: 2 / -1;
       }
 
@@ -41,6 +51,14 @@
 
   &__heading-1 {
     font-family: $font-secondary;
+
+    @include respond(lan-phn) {
+      font-size: 5.7rem;
+    }
+
+    @include respond(port-phn) {
+      font-size: 5.2rem;
+    }
   }
 
   &__paragraph {
@@ -48,6 +66,10 @@
     font-size: 2.4rem;
     word-wrap: break-word;
     margin: 2rem 0;
+
+    @include respond(port-phn) {
+      font-size: 2rem;
+    }
   }
 
   &__text {
@@ -59,9 +81,25 @@
     border: 6px solid white;
     padding: 3rem 1rem 2rem;
 
-    @include respond(phone) {
-      left: 12rem;
-      top: 70rem;
+    @include respond(lan-tab) {
+      top: 5rem;
+      left: 43.5rem;
+      right: 3rem;
+    }
+
+    @include respond(port-tab) {
+      top: 53rem;
+      left: 7.5rem;
+      right: 5rem;
+    }
+
+    @include respond(lan-phn) {
+      top: 51rem;
+      left: 5.5rem;
+    }
+
+    @include respond(port-phn) {
+      top: 55rem;
     }
   }
 }

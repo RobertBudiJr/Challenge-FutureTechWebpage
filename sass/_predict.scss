@@ -3,12 +3,20 @@
   position: relative;
   height: 40rem;
 
-  @include respond(tab-port) {
+  @include respond(desktop) {
+    height: 47rem;
+  }
+
+  @include respond(lan-tab) {
     height: 50rem;
   }
 
-  @include respond(phone) {
+  @include respond(lan-phn) {
     height: 47rem;
+  }
+
+  @include respond(port-phn) {
+    height: 56rem;
   }
 
   &__block {
@@ -21,8 +29,23 @@
 
       border: 4px solid #17cad0;
 
-      @include respond(phone) {
-        top: 14rem;
+      @include respond(lan-tab) {
+        top: 16rem;
+        left: 36rem;
+      }
+
+      @include respond(port-tab) {
+        top: 13rem;
+        left: 15rem;
+      }
+
+      @include respond(lan-phn) {
+        left: 5rem;
+      }
+
+      @include respond(port-phn) {
+        left: 3.5rem;
+        top: 16rem;
       }
     }
 
@@ -34,6 +57,10 @@
       right: 9rem;
 
       border: 8px solid #17cad0;
+
+      @include respond(port-phn) {
+        display: none;
+      }
     }
   }
 
@@ -47,8 +74,16 @@
       line-height: 1.2;
       font-family: $font-secondary;
 
-      @include respond(phone) {
-        padding: 5rem 5rem 6rem;
+      @include respond(lan-tab) {
+        padding: 8rem 10rem 4rem;
+      }
+
+      @include respond(port-tab) {
+        padding: 4rem 11rem;
+      }
+
+      @include respond(lan-phn) {
+        padding: 4rem 1rem;
       }
     }
 
@@ -65,8 +100,18 @@
         display: block;
       }
 
-      @include respond(phone) {
-        left: 10rem;
+      @include respond(lan-tab) {
+        left: 15rem;
+      }
+
+      @include respond(lan-phn) {
+        left: 5rem;
+        right: 6rem;
+      }
+
+      @include respond(port-phn) {
+        left: 3.5rem;
+        right: 4.5rem;
       }
     }
   }

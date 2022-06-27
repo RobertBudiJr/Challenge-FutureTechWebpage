@@ -5,17 +5,19 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  @include respond(phone) {
-    grid-template-rows: repeat(2, 1fr);
+  @include respond(port-tab) {
+    display: grid;
+
     grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
   }
 
   &__left {
     grid-column: 1 / 2;
     padding: 0 3rem;
 
-    @include respond(phone) {
-      grid-row: 1 / 2;
+    @include respond(port-tab) {
+      grid-row: 2 / -1;
     }
 
     &__heading-5 {
@@ -42,8 +44,8 @@
   &__right {
     grid-column: 2 / -1;
 
-    @include respond(phone) {
-      grid-row: 2 / -1;
+    @include respond(port-tab) {
+      grid-row: 1 / 2;
     }
 
     display: grid;
@@ -77,17 +79,20 @@
     background-color: #17cad0;
     outline: 1.5rem solid white;
 
-    @include respond(tab-land) {
-      left: 95rem;
-    }
-    @include respond(tab-port) {
-      left: 80rem;
+    @include respond(lan-tab) {
+      left: 64rem;
     }
 
-    @include respond(phone) {
-      left: 57rem;
-      height: 17rem;
+    @include respond(port-tab) {
+      bottom: unset;
+      top: 18rem;
+      left: 10rem;
       width: 1.5rem;
+      outline: 1rem solid white;
+    }
+
+    @include respond(port-phn) {
+      display: none;
     }
   }
 }
